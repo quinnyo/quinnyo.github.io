@@ -4,10 +4,25 @@
         <loc>https://quinnyo.github.io/</loc>
     </url>
     <url>
+        <loc>https://quinnyo.github.io/about/</loc>
+    </url>
+    <url>
         <loc>https://quinnyo.github.io/article/</loc>
     </url>
     <url>
         <loc>https://quinnyo.github.io/article/hello/</loc>
         <lastmod>2024-06-09</lastmod>
+    </url>
+    <url>
+        <loc>https://quinnyo.github.io/tags/</loc>
+    </url>
+    <url>
+        <loc>https://quinnyo.github.io/tags/taggy-two/</loc>
+    </url>
+    <url>
+        <loc>https://quinnyo.github.io/tags/taggy/</loc>
+    </url>
+    <url>
+        <loc>https://quinnyo.github.io/tags/test/</loc>
     </url>
 </urlset>

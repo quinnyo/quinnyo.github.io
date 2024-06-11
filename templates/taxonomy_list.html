@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ taxonomy.name }}</h1>
+<div class="tags">
+	{%- set tags = get_taxonomy(kind="tags") %}
+	{%- for item in tags.items %}
+	<a href="{{ item.permalink | safe }}">#{{ item.name }}</a>&nbsp;
+	{%- endfor %}
+</div>
+{% endblock content %}

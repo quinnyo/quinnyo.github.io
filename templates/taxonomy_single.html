@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{%- block content -%}
+{%- if term %}
+<h3 class="filter">#{{ term.name }}</h3>
+{%- endif %}
+<ul class="articles">
+	{%- for page in term.pages %}
+	<li>
+		<span>
+			<i>
+				{#
+				<time datetime="{{ page.date | date(format='%+') }}" pubdate>
+					{{ page.date | date(format=config.extra.date_format) }}
+				</time>
+				#}
+			</i>
+		</span>
+		<a href="{{ page.permalink }}">{{ page.title }}</a>
+	</li>
+	{%- else %}
+	<li>
+		{{ trans(key="no_posts", lang=lang) }}
+	</li>
+	{%- endfor %}
+</ul>
+{%- endblock -%}
