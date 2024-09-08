@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>{{ config.title }} Confessions: {{ page.title }}</title>
+</head>
+
+{% block content %}
+<h1 class="title">
+	{{ page.title }}
+</h1>
+{{ page.content | safe }}
+{% endblock content %}
+
+</html>

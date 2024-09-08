@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Quinndex</title>
+</head>
+
+<body><header>
+	<a href="https://quinnyo.github.io/" class="title">
+		<h1>Quinndex</h1>
+	</a>
+	<nav>&lang;
+<a href="https://quinnyo.github.io/article/">articles</a>
+&blacksquare;
+<a href="https://quinnyo.github.io/tags/">tags</a>
+&blacksquare;
+<a href="https://quinnyo.github.io/about/">wtf</a>
+&rang;
+
+	</nav>
+</header>
+
+<h1 class="title">
+	Confessions
+</h1>
+
+<div class="confess"></div>
+<script>
+const things = [
+//
+	"https://quinnyo.github.io/confessions/no-idea/",
+//
+	"https://quinnyo.github.io/confessions/suite/",
+//
+];
+function confessRandom() {
+	const divs = document.querySelectorAll(".confess");
+	for (const div of divs) {
+		var frame = document.createElement("iframe")
+		frame.src = things[Math.floor(Math.random() * things.length)];
+		div.appendChild(frame);
+		for (const child of div.querySelectorAll(".confess-iframe")) {
+			child.remove();
+		}
+		frame.className = "confess-iframe";
+	}
+}
+confessRandom();
+</script>
+
+</body>
+
+</html>

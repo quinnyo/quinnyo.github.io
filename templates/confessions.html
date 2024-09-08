@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+	{{ section.title }}
+</h1>
+{{ section.content | safe }}
+<div class="confess"></div>
+<script>
+const things = [
+//{% for page in section.pages %}
+	"{{ page.permalink | safe }}",
+//{% endfor %}
+];
+function confessRandom() {
+	const divs = document.querySelectorAll(".confess");
+	for (const div of divs) {
+		var frame = document.createElement("iframe")
+		frame.src = things[Math.floor(Math.random() * things.length)];
+		div.appendChild(frame);
+		for (const child of div.querySelectorAll(".confess-iframe")) {
+			child.remove();
+		}
+		frame.className = "confess-iframe";
+	}
+}
+confessRandom();
+</script>
+
+{% endblock content %}
